@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCTS Minecraft Official Web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: linear-gradient(to right, #3494e6, #ec6ead);
+            background-size: 200% 100%;
+            animation: gradientColors 10s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative; /* Ensure relative positioning for absolute child elements */
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+            color: red; /* Red color */
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: yellow; /* Yellow color */
+        }
+
+        h5 {
+            font-size: 1em; /* Adjusted font size */
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            color: black; /* Black color */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            background-color: black; /* Black color */
+            color: #fff;
+            border-radius: 8px;
+            transition: background 0.3s ease, color 0.3s ease; /* Add color transition */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2); /* Box shadow */
+            z-index: 1; /* Ensure the button stays above the border */
+        }
+
+        button:hover {
+            background-color: #fff; /* White color on hover */
+            color: black; /* Black text on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+            border: 5px solid #0ff; /* Thicker neon border color */
+        }
+
+        .neon-border {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 5px; /* Adjusted height for the neon border */
+            pointer-events: none; /* Ensure the border doesn't interfere with button clicks */
+            z-index: 0; /* Set behind other elements */
+            border: 4px solid #0ff; /* Neon border color */
+        }
+
+        .neon-border-top {
+            top: 0;
+        }
+
+        .neon-border-bottom {
+            bottom: 0;
+        }
+
+        @keyframes gradientColors {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="neon-border neon-border-top"></div>
+    <h2> WELCOME TO THE SCTS MINECRAFT OFFICIAL SERVER</h2>
+    <h1> ABOUT THE SERVER !</h1>
+    <h5 style="color: rgb(2, 0, 0);">
+        The server is a 24/7 online server with a maximum capacity of 50 members. You can peacefully build/play Minecraft with your friends. The server is only for the students studying in Sri Chaitanya Techno School. In the server, there is no rule of lifesteal, meaning there is no fear of getting banned from the server or the enemy gaining hearts via alt acc. However, you may get banned if any of the rules are broken and after 3 warnings. Scroll down for the IP.
+    </h5>
+
+    <h2 style="color: yellow;">How to Play?</h2>
+
+    <h5 style="color: black;">
+        Play the SMP the same way you play Minecraft normally. Here you can chat and play Minecraft together with players from classes 6, 7, and 8 only. The server can be joined by any medium, be it JAVA or PE, and any version (recommended = 1.17 - 1.20 or the latest).
+    </h5>
+    <h2 style="color: orange;">Rules</h2>
+    <h5 style="color: rgb(0, 0, 0);">
+        1. No cheating/hacking or abusive language<br>
+        2. Be sensible, helpful, and kind towards each other<br>
+        3. No bringing your alternate accounts, they aren't invited<br>
+        4. Gender Equality <br>
+        5. If you find anyone cheating or breaking any of the rules, contact the mod immediately - MOD: Sreyash/Avyansh
+    </h5>
+    <h2 style="color: purple;">Rules of Mods</h2>
+    <h5 style="color: rgb(0, 0, 0);">
+        The server does not contain any kind of cheats or creative creates even by the mod. The mod can only ban someone if the victim was found or caught breaking the rules!
+    </h5>
+    <h2 style="color: yellow;">The rules are strict, and so are the actions</h2>
+    <button id="showAlert">Click me for IP</button>
+    <div class="neon-border neon-border-bottom"></div>
+
+    <script>
+        const showAlertButton = document.getElementById('showAlert');
+
+        function getRandomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        function changeBackgroundColor() {
+            document.body.style.background = `linear-gradient(to right, ${getRandomColor()}, ${getRandomColor()})`;
+        }
+
+        showAlertButton.addEventListener('click', function () {
+            alert('IP not decided yet');
+            changeBackgroundColor();
+        });
+
+        setInterval(changeBackgroundColor, 5000);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
